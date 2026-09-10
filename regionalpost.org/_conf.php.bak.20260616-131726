@@ -1,0 +1,18 @@
+<?php
+  
+    $_conf = array(
+	
+		
+        'debug' => false,
+        
+        'mysql'=>array(
+            'host'=>'127.0.0.1',
+            'dbname'=>'armenianvillas_regpost',
+            'user'=>'armenianvillas_regpost_user',
+            'passwd'=>'CHANGE_ME',
+            'prefix'=>'tb_',
+        )
+        
+    );
+   
+?>

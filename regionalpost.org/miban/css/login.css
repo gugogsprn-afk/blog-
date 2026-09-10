@@ -1,0 +1,129 @@
+﻿#content {
+padding: 0 !important;
+}
+
+#loginform-wrapper {
+    position: absolute;
+    top:50%;
+    left:0;
+    padding: 20px 0;
+    text-align:left;    
+    background-color:#00779B;
+    width:100%;
+    color:white;
+    margin-top:-150px;
+}
+
+#loginform-center {
+    width:400px;
+    margin:0 auto;
+
+}
+#loginform-wrapper h1 {
+    margin:0;
+    padding:0;
+    font-size:29px;
+}
+#loginform {
+    margin-top:10px;
+}
+#loginform .field-wrapper {
+    margin: 5px 0;
+}
+
+#loginform .field-wrapper .input-field {
+    width:368px;
+    border:1px solid #00A9DC;
+    padding: 6px 12px;
+    outline: none;
+    color: #555555;
+    font-size:14px;
+}
+
+.submit-wrapper {
+    margin-top: 20px;
+    text-align:right;
+}
+
+.submit-wrapper input {
+    padding: 2px 5px;
+    font-size: 13px;
+}
+
+.k-button {
+    padding: 3px 15px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+
+#message-wrapper {
+    padding: 15px 20px;
+    margin-top: 30px;
+    background-color: #E9543F;
+    color: white;
+    text-align: center;
+    font-size: 16px; 
+}
+
+
+#reload_code {
+    padding: 3px 13px !important;
+    background-image: url('../imgs/simple_sync.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -2px;
+    
+}
+
+#sec_code {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+
+#loginform .field-wrapper #fb_code.input-field {
+    width: 226px;
+    margin-left: 5px;
+}
+
+
+.loginwrapper {
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px; 
+}
+
+#loginform.activation .field-wrapper  i {
+    float: none;
+    clear: both;
+}
+#loginform.activation .field-wrapper .input-field {
+    width:224px;
+   
+}
+#loginform.activation .field-wrapper span {
+    display: block;
+    float: left;
+    width: 150px;
+    line-height: 33px;
+    font-size: 14px;
+}
+#loginform.activation .field-wrapper.captcha .input-field {
+
+}
+#loginform.activation .field-wrapper.captcha #fb_code.input-field {
+    width: 223px;
+    float: none;
+}
+
+#loginlang {
+    position: absolute;
+    right: 10px;
+    top: -17px;
+}
+#loginlang * {
+    color: white;
+}

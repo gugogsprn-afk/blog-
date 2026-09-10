@@ -1,0 +1,242 @@
+/*
+     #a5ce39; kanach
+     #00A9DC kaput
+     #c0e463 select kanach
+    */
+
+.AllCont #header {
+    background-color: #00A9DC;
+    color: white;
+    padding: 26px 0 4px 0;
+}
+
+#Sirius-MainMenu-wrapper {
+    padding-left:10px;
+    background-color: white;
+}
+
+#footer {
+   background-color: white;
+   border-top: 3px solid #00A9DC;
+}
+
+
+#content {
+  /*  padding: 15px 20px;*/
+  position:relative;
+}
+
+#Sirius-userinfo-wrapper {
+    position: absolute;
+    top:26px;
+    right:10px;
+}
+
+#Sirius-userinfo-logout img,#Sirius-userinfo-logout:active,#Sirius-userinfo-logout:link,#Sirius-userinfo-logout:visited {
+    text-decoration:none;
+    background-image:url('../imgs/logout.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding: 3px 3px 3px 20px;
+    margin-left: 6px;
+}
+#Sirius-userinfo-logout:hover {
+    background-image:url('../imgs/logout-hover.png');
+}
+
+
+#footer-copy {
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+#developedby {
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 25px;
+}
+#developedby a {
+    font-size: 10px;
+}
+/* error */
+#info-page-wrapper {
+    position: fixed;
+    top: 50%;
+    margin-top: -92px;
+    width: 100%;
+    z-index: 10010;
+}
+.blockOverlay {
+    z-index: 10009 !important;
+}
+.blockMsg {
+    z-index: 10011 !important;
+}
+
+#info-page {
+    padding: 10px 20px 10px 65px;
+
+
+    color: white;
+
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+#info-page-wrapper.error {
+    background-color: #E9543F;
+    border-bottom:1px solid #ff8a79;
+    border-top:1px solid #ff8a79;
+}
+
+#info-page-wrapper.info {
+    background-color: #72D165;
+    border-bottom: 1px solid #2CAA31;
+    border-top: 1px solid #2CAA31;
+}
+
+
+#info-page h1 {
+    padding-left: 35px;
+}
+
+#info-page-wrapper .err_none {
+    background-image:url('../imgs/error.png');
+}
+
+#info-page-wrapper .err_security {
+    background-image:url('../imgs/security.png');
+}
+
+#info-return-wrapper {
+    margin-top:15px;
+    text-align:right;
+}
+
+
+
+div.page-title {
+    border-bottom:1px solid #f0f0f0;
+    margin-top:5px;
+    font-size: 20px;
+    position:relative;
+    padding-left: 10px;
+}
+
+div.page-title span {
+    font-weight: normal;
+    color: #555555;
+    padding-left: 19px;
+    padding-right: 6px;
+    background-image: url('../imgs/next.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+div.page-title span.last {
+    color: #00A9DC;
+}
+
+div.page-title img {
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+div.page-title .page-toolbar {
+    position:absolute;
+    right:11px;
+    top:0;
+}
+
+.w-button,.w-button:link,.w-button:active,.w-button:visited {
+    padding: 3px 14px !important;
+    background-color: white;
+    background-position:center;
+    background-repeat:no-repeat;
+    text-decoration:none;
+    min-width: 0 !important;
+}
+
+div#page-content-wrapper {
+    padding: 10px 12px;
+}
+
+
+
+.b-down {
+    background-image: url('../imgs/down.png') !important;
+}
+.b-up {
+    background-image: url('../imgs/up.png') !important;
+}
+
+.b-visible {
+    background-image: url('../imgs/visible.png') !important;
+}
+.b-nvisible {
+    background-image: url('../imgs/nvisible.png') !important;
+}
+
+.b-visible1 {
+    background-image: url('../imgs/visible.png') !important;
+}
+.b-visible0 {
+    background-image: url('../imgs/nvisible.png') !important;
+}
+
+.b-remove {
+    background-image: url('../imgs/remove.png') !important;
+}
+.b-analog {
+    background-image: url('../imgs/analog.png') !important;
+}
+
+.b-url {
+    background-image: url('../imgs/url.png') !important;
+}
+
+.item-nvisible {
+    color: #b6b6b6;
+}
+
+
+#itemlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+#itemlist li {
+    display: block;
+    width: 100%;
+    margin: 0 0 6px 0;
+    padding: 0 7px;
+    line-height: 28px;
+    list-style:  none;
+    border-bottom: 1px dashed #ededed;
+}
+#itemlist li .b-remove {
+    float: right;
+}
+
+.k-button,.k-button:hover {
+    text-decoration: none;
+    color: white;
+}
+.k-button:link,.k-button:visited,.k-button:active {
+    color: white;
+}
+
+#map-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ebebeb;
+    margin-top: 10px;
+}
+
+.k-tabstrip-items .k-title {
+    z-index: 0 !important;
+}
+
+
+

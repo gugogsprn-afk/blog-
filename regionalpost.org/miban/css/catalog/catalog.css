@@ -1,0 +1,13 @@
+#treeview {
+    background-color: #fafafa;
+}
+
+#btn_parent {
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-image: url('../../imgs/tree.png') !important;
+
+}
+.categoryfields {
+    margin-top: 10px;
+}
