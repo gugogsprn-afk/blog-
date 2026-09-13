@@ -1,0 +1,396 @@
+/* // changed */
+h1 {
+    font-size:40px;
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    font-size:30px;
+    margin:0;
+    padding:0;
+}
+
+h3 {
+    font-size:20px;
+    margin:0;
+    padding:0;
+}
+
+table.fieldset {
+    width: 100%;
+    border-spacing:0;
+    border-collapse:collapse;
+    border: 0;
+    text-align: left;
+    vertical-align: top;
+}
+table.fieldset > tbody > tr > th {
+    width: 400px;
+    background-color: #efefef;
+    color:  #555555;
+    padding: 5px 10px;
+    font-weight: normal;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: top;
+}
+table.fieldset > tbody > tr > td {
+    padding: 5px 10px;
+    color:  #555555;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table.fieldset  .submitrow {
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+table.fieldset  .submitrow .submit {
+    background-image: url('../imgs/ok-w.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 45px;
+}
+div.submitrow {
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.submitrow .submit {
+    background-image: url('../imgs/ok-w.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 45px;
+}
+
+table.fieldset  .a-button,table.fieldset  .a-button:hover {
+    background-image: url('../imgs/reject.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 45px;
+    color: white;
+    text-decoration: none;
+}
+table.fieldset  .d-button,table.fieldset  .d-button:hover {
+    background-image: url('../imgs/remove_w.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 45px;
+    color: white;
+    text-decoration: none;
+}
+table.fieldset  .del-button,table.fieldset  .del-button:hover {
+    background-image: url('../imgs/remove_w.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    padding: 2px 11px;
+}
+
+table.fieldset > tbody > tr.splitter > th,table.fieldset > tbody > tr.splitter > td  {
+    background-color: white;
+}
+table.fieldset > tbody > tr.caption > th {
+    background-color: white;
+    font-size: 15px;
+}
+
+table.fieldset > tbody > tr > td > input[type=text], table.fieldset > tbody > tr > td > select {
+    width: 400px;
+}
+
+a.underline {
+    text-decoration: underline;
+}
+
+a.a-details {
+    background-image: url('../imgs/details.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a.a-details:hover {
+    background-image: url('../imgs/details.png');
+}
+
+/*
+table.table-list {
+    width: 100%;
+    border-spacing:0;
+    border-collapse:collapse;
+    border: 0;
+    text-align: left;
+    vertical-align: top;
+}
+table.table-list > tbody > tr > th {
+    width: 100px;
+    background-color: #efefef;
+    color:  #555555;
+    padding: 5px 10px;
+    font-weight: normal;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: top;
+}
+table.table-list > tbody > tr > td {
+    padding: 5px 10px;
+    color:  #555555;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: top;
+}
+*/
+
+input[type="password"].k-input {
+    font-size: 100%;
+    font-family: inherit;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+color: #787878;
+border-color: #e3e3e3;
+outline: 0;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+padding: .25em 0;
+}
+
+
+
+.short {
+    width: 100px !important;
+}
+.midinp {
+    width: 200px !important;
+}
+.k-descr {
+    display: block;
+    padding: 3px 0;
+    font-size: 12px;
+    font-family: 'sagii';
+    color: #C07515;
+}
+.center {
+    text-align: center;
+}
+
+a.magic-button {
+    margin-left: -3px;
+    font-size: 4px;
+    background-image: url('../imgs/magic.png');
+    padding: 9px 12px;
+background-position: center;
+background-repeat: no-repeat;
+margin-top: -3px;
+    
+}
+a.magic-button:hover {
+    background-image: url('../imgs/magic.png');
+    text-decoration: none;
+}
+.treebutton {
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-image: url('../imgs/tree.png') !important;
+}
+
+.listView {
+    margin: 10px;
+    
+}
+.listView .listView-item {
+    float: left;
+    position: relative;
+    width: 200px;
+    
+    text-align: center;
+    vertical-align: top;
+    margin: 10px;
+    padding: 5px;
+    border:1px solid #f3f3f3;
+    
+}
+.listView .listView-item > a {
+    display: block;
+    width: 100%;
+}
+.listView .listView-item > a > img {
+    display: block;
+    width: 100%;
+        
+}
+.View-item {
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px;
+    padding: 5px;
+    border:1px solid #f3f3f3;
+}
+.View-item:hover {
+    background-color: #cecece;
+}
+.View-item .removefile,.View-item .removefile:hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../imgs/remove.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.listView .listView-item:hover {
+    background-color: #cecece;
+}
+.listView .listView-item .removefile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../imgs/remove.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+}
+.listView .listView-item .makedefault {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../imgs/task.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.listView .listView-item .defaultitem {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;   
+    background-image: url('../imgs/star.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.k-url {
+    color: black;
+    font-family: 'sagi';
+}
+
+.rejected {
+    background-color: #FFE4E4;
+    display: block;
+    background-image: url('../imgs/rejected.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+
+.st_payed,.st_error {
+    display: block;
+    width: 32px;
+    height: 20px;
+}
+.st_payed {
+    background-color: #71F040;
+border: 1px solid #009795;
+}
+.st_error {
+    background-color: #EB6B6B;
+    border:1px solid maroon;
+}
+
+
+.wnd_btn_wrap {
+    text-align: right;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.wnd_btn_wrap a,.wnd_btn_wrap a:link,.wnd_btn_wrap a:active,.wnd_btn_wrap a:visited,.wnd_btn_wrap a:hover {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+
+
+/** error and info messages **/
+div.sirius-message {
+    position: fixed;
+    top: 50%;
+    margin-top: -92px;
+    width: 100%;
+    z-index: 10010;
+}
+div.sirius-message h2 {
+    color: white;
+    font-weight: bold;
+}
+    div.sirius-message.error {
+        background-color: #E9543F;
+        border-bottom:1px solid #ff8a79;
+        border-top:1px solid #ff8a79;
+    }
+    div.sirius-message.info {
+        background-color: #72D165;
+        border-bottom: 1px solid #2CAA31;
+        border-top: 1px solid #2CAA31;
+    }
+
+div.sirius-message > div {
+    padding: 10px 20px 10px 65px;
+    color: white;
+    background-position: 0px 0px;
+    background-repeat: no-repeat; 
+}
+
+    div.sirius-message > div.err_none {
+        background-image:url('../imgs/error.png');
+    }
+
+    div.sirius-message > div.err_security {
+        background-image:url('../imgs/security.png');
+    }
+    div.sirius-message > div.info_none {
+        background-image:url('../imgs/ok-w.png');
+        background-position: 13px 11px;
+    }
+
+    div.sirius-message .message-backbutton {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+    }    
+/* end of message */
+
+
+table.fieldset.subtable th {
+    width: 120px;
+}
+
+
+div.growlUI { 
+    background: url('../imgs/ok-w.png') no-repeat 10px 10px 
+}
+div.growlUI h1, div.growlUI h2 {
+    color: white; padding: 5px 5px 5px 75px; text-align: left;
+    border:none;
+}
+div.growlUI h1 {font-size: 18px;font-weight: bold;}
+div.growlUI h2 {font-size: 14px;font-weight: bold;} 
+
+
+.listView:after {
+    content: " ";
+    display: block;
+    float: none;
+    clear: both;
+}
