@@ -1,0 +1,70 @@
+.addinfo-image {
+    width: 100px;
+    height: 100px;
+    border:1px solid #ebebeb;
+    background-color: white;
+    position: relative;
+}
+.addinfo-image .select-image {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.addinfo-image .delete-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+table.table-list.fieldset {
+    width: auto;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    border: 0px solid #ebebeb;
+}
+
+
+.sortable-placeholder {
+    height: 112px;
+    background-color: #ffebaf;
+    
+}
+#add-category-table .sortable-placeholder,#add-geocat-table .sortable-placeholder {
+    height: 37px;
+    
+}
+
+.item-cat-name {
+    margin-left: 5px;
+}
+.handle {
+    padding: 2px 10px;
+    background-image: url('../imgs/move.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ebebeb;
+    cursor: move;
+    background-color: white;
+    margin-right: 10px;
+}
+
+
+#add-category-table .item-link,#add-geocat-table .item-link {
+    display: none;
+    visibility: hidden;
+}
+
+#btn_parent {
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-image: url('../imgs/tree.png') !important;
+
+}
+
+
+#booking-grid-wrapper {
+    margin-bottom: 30px;
+}

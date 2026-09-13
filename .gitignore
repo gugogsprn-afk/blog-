@@ -6,4 +6,9 @@ error_log
 .ftpquota
 regionalpost.org/page_files/
 regionalpost.org/site_files/
-regionalpost.org/ru/
+regionalpost.org/ru/page_files/
+regionalpost.org/ru/site_files/
+regionalpost.org/ru/files/
+regionalpost.org/ru/miban/plugins/
+regionalpost.org/fr/site_files/
+regionalpost.org/fr/page_files/

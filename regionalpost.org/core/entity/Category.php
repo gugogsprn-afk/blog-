@@ -78,7 +78,7 @@ class Category extends SiteEntity {
         if ($DB->RowCount()>0) {
             while($row=$DB->ReadRow()) {
                 $row['id'] = intval($row['id']);
-                $row['url'] = HttpContext::current()->culture()->Language() . '/'.$row['url'];
+                $row['url'] = HttpContext::current()->culture()->LanguagePath() . $row['url'];
                 $ret[$row['id']] = $row;
             }
         }

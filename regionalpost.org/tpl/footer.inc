@@ -44,9 +44,9 @@
                     <a
                         href="{{media_kit}}"
                         target="_blank"
-                        title="Media Kit"
+                        title="{{if curlang(=fr)}}Dossier de presse{{else curlang}}Media Kit{{end if curlang}}"
                     >
-                        Media Kit
+                        {{if curlang(=fr)}}Dossier de presse{{else curlang}}Media Kit{{end if curlang}}
                     </a>
                 </li>
                 {{end if media_kit}}
@@ -72,12 +72,12 @@
                 {{end for socs}}
             </div>
             <a
-                href="{{baseaddress}}{{curlang}}/"
+                href="{{baseaddresslang}}"
                 title="{{site_company}}"
             >
                 {{site_company}}
             </a>
-            <span>&copy; {{years}}. All Rights Reserved.</span>
+            <span>&copy; {{years}}. {{if curlang(=fr)}}Tous droits réservés.{{else curlang}}All Rights Reserved.{{end if curlang}}</span>
         </div>
     </div>
 </div>

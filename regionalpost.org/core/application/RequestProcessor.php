@@ -63,7 +63,19 @@
 
             $this->langIdentifier = strtolower(trim(isset($_GET['_langid']) ? $_GET['_langid'] : ''));
 
-            if (empty($this->langIdentifier)) {
+            $scriptName = isset($_SERVER['SCRIPT_NAME']) ? str_replace('\\', '/', $_SERVER['SCRIPT_NAME']) : '';
+            $isNestedLangApp = (strpos($scriptName, '/fr/') !== false || strpos($scriptName, '/ru/') !== false);
+
+            if (empty($this->langIdentifier) && $isNestedLangApp) {
+                if (strpos($scriptName, '/fr/') !== false) {
+                    $this->langIdentifier = 'fr';
+                } elseif (strpos($scriptName, '/ru/') !== false) {
+                    $this->langIdentifier = 'ru';
+                }
+            }
+
+            if (empty($this->langIdentifier) || $isNestedLangApp) {
+                // Nested /ru and /fr apps already include the language prefix in BASEDIR.
                 $this->baseRelativeAddress = ltrim($suff, '/');
             } else {
                 $this->baseRelativeAddress = ltrim($suff, '/') . $this->langIdentifier . '/';
@@ -212,17 +224,28 @@
             $base = rtrim($this->baseAddress, '/');
             $lang = trim((string)$this->langIdentifier, '/');
             $rel = trim(str_replace('\\', '/', (string)$relativeUrl), '/');
+            $nested = $this->isNestedLangApp();
 
             if ($rel === '') {
+                if ($nested) {
+                    return $base . '/';
+                }
                 return $base . '/' . ($lang !== '' ? $lang . '/' : '');
             }
 
-            // Relative URLs from urlcache do not include the language segment.
-            if ($lang !== '' && strpos($rel, $lang . '/') !== 0 && $rel !== $lang) {
+            // Nested /fr and /ru apps already include the language in baseAddress.
+            if (!$nested && $lang !== '' && strpos($rel, $lang . '/') !== 0 && $rel !== $lang) {
                 return $base . '/' . $lang . '/' . $rel;
             }
 
             return $base . '/' . $rel;
+        }
+
+        private function isNestedLangApp() {
+            $script = isset($_SERVER['SCRIPT_NAME']) ? str_replace('\\', '/', $_SERVER['SCRIPT_NAME']) : '';
+            $baseDir = defined('BASEDIR') ? str_replace('\\', '/', (string)BASEDIR) : '';
+            $haystack = $script . ' ' . $baseDir;
+            return (bool)preg_match('#/(fr|ru)(/|$)#', $haystack);
         }
 
     }

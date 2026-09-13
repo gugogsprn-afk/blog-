@@ -15,10 +15,10 @@ class Page extends SiteEntity {
 
     public function __construct($mId) {
         parent::__construct($mId);
-        $this->FieldArray =  Array('tp.id', 'tp.name_#','tp.descr_#','tp.content_#','tp.visible','tp.block_id','tf.thumbname','tf.filename',"CONCAT('".HttpContext::current()->culture()->Language()."/',tu.url) as url","CASE WHEN tu.meta_robots=0 THEN 'true' ELSE '' END as mfol",'tp.date_object_$','tp.parent_id','tp.tags','tp.tagsb','tp.alias','tp.ainfo_#','tp.binfo_#',
+        $this->FieldArray =  Array('tp.id', 'tp.name_#','tp.descr_#','tp.content_#','tp.visible','tp.block_id','tf.thumbname','tf.filename',"CONCAT('".HttpContext::current()->culture()->LanguagePath()."',tu.url) as url","CASE WHEN tu.meta_robots=0 THEN 'true' ELSE '' END as mfol",'tp.date_object_$','tp.parent_id','tp.tags','tp.tagsb','tp.alias','tp.ainfo_#','tp.binfo_#',
             'YEAR(tp.date_object) AS date_year','MONTH(tp.date_object) AS date_month','DAY(tp.date_object) AS date_day',
             'tp.price','tp.intsa','tp.intsb','tp.intsc', 'tp.cinfo_#');
-        $this->CollectionFieldArray = Array('tp.id', 'tp.name_#','tp.descr_#','tp.content_#','tp.visible','tp.block_id',"CONCAT('".HttpContext::current()->culture()->Language()."/',tu.url) as url","CASE WHEN tu.meta_robots=0 THEN 'true' ELSE '' END as mfol",'tf.thumbname','tf.filename','tf.img_width','tf.img_height','tp.date_object_$','tp.parent_id','tp.tags','tp.tagsb','tp.alias','tp.ainfo_#','tp.binfo_#',
+        $this->CollectionFieldArray = Array('tp.id', 'tp.name_#','tp.descr_#','tp.content_#','tp.visible','tp.block_id',"CONCAT('".HttpContext::current()->culture()->LanguagePath()."',tu.url) as url","CASE WHEN tu.meta_robots=0 THEN 'true' ELSE '' END as mfol",'tf.thumbname','tf.filename','tf.img_width','tf.img_height','tp.date_object_$','tp.parent_id','tp.tags','tp.tagsb','tp.alias','tp.ainfo_#','tp.binfo_#',
             'YEAR(tp.date_object) AS date_year','MONTH(tp.date_object) AS date_month','DAY(tp.date_object) AS date_day',
             'tp.price','tp.intsa','tp.intsb','tp.intsc', 'tp.cinfo_#');
     }

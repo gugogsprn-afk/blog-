@@ -239,7 +239,7 @@ RewriteRule .* - [F]
 # here go redirects ( use 301 for seo ranking (general site), use 302 for prevent ranking ) 
 
 # add trailing slash
-RewriteRule ^(en|ru)$ $1/ [R=302,QSA,NC,NE,L]
+RewriteRule ^(en|ru|fr)$ $1/ [R=302,QSA,NC,NE,L]
 
 # redirect by browser accept language
 # RewriteCond %{HTTP:Accept-Language} ^hy [NC]
@@ -257,7 +257,7 @@ RewriteCond %{REQUEST_FILENAME} index.php
 RewriteCond %{REQUEST_URI} !miban/
 RewriteCond %{REQUEST_URI} !miban$
 # RewriteCond %{REQUEST_METHOD} !POST
-RewriteRule ^/?(?!en/|ru/)(.*)$ en/$1 [L,QSA,NC,NE,R=302]
+RewriteRule ^/?(?!en/|ru/|fr/)(.*)$ en/$1 [L,QSA,NC,NE,R=302]
 
 # redirect to miban 
 # RewriteCond %{REQUEST_FILENAME} !-f
@@ -265,15 +265,25 @@ RewriteRule ^/?(?!en/|ru/)(.*)$ en/$1 [L,QSA,NC,NE,R=302]
 # RewriteRule ^/?miban/([a-zA-Z]+)/?((.*)\.([js|htm|html]+))?$ miban/index.php?_show=$1&_voider=$3&_type=$4 [QSA,NC,NE,L] # NC|nocase NE|noescape QSA|qsappend append query
 
 # convert seo url 
+# Admin panel app under /miban/ — do not rewrite into public CMS
+RewriteRule ^miban(?:/|$) - [NC,L]
+RewriteRule ^fr/miban(?:/|$) - [NC,L]
+
 # Russian site is a separate app under /ru/
 RewriteRule ^ru/?$ ru/index.php [L,QSA,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ru/(.*)$ ru/index.php?_rwr=$1 [L,QSA,NC,NE]
 
+# French admin/site under /fr/
+RewriteRule ^fr/?$ fr/index.php [L,QSA,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^/?(?:(en|ru)/)?(.*)$ index.php?_rwr=$2&_langid=$1 [QSA,NC,NE,L] # NC|nocase NE|noescape QSA|qsappend append query
+RewriteRule ^fr/(.*)$ fr/index.php?_rwr=$1 [L,QSA,NC,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?(?:(en|ru|fr)/)?(.*)$ index.php?_rwr=$2&_langid=$1 [QSA,NC,NE,L] # NC|nocase NE|noescape QSA|qsappend append query
 
 # if file exists , dont touch 
 RewriteRule ^(.*)$ $1 [QSA,NC,NE,L]

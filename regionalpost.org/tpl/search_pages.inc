@@ -11,7 +11,7 @@
             <div class="flex-box flexsmall">
                 <div class="news-item search-item" data-id="{{ac.id}}">
                     <a href="{{ac.url}}" title="{{ac.name}}">
-                        <img src="{{ac.filename}}" alt="{{ac.name}}" />
+                        {{if ac.filename}}<img src="{{ac.filename}}" alt="{{ac.name}}" />{{end if ac.filename}}
 
                         <div class="acl">
                             <div class="h1">{{ac.name}}</div>

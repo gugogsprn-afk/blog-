@@ -18,7 +18,16 @@
                 'suffix'=>'_lg1',
                 'name'=>'Русский',
                 'name_en'=>'Russian'
-            )/*,
+            ),
+            'fr'=>array(
+                'id'=>'fr',
+                'short'=>'fra',
+                'culture'=>'fr-FR',
+                'suffix'=>'',
+                'name'=>'Français',
+                'name_en'=>'French'
+            )
+            /*,
             'hy'=>array(
                 'id'=>'hy',
                 'short'=>'հայ',
@@ -26,14 +35,6 @@
                 'suffix'=>'_lg2',
                 'name'=>'Հայարեն',
                 'name_en'=>'Armenian'
-            ),
-            'fr'=>array(
-                'id'=>'fr',
-                'short'=>'fra',
-                'culture'=>'fr-FR',
-                'suffix'=>'',
-                'name'=>'Ֆրանսերեն',
-                'name_en'=>'French'
             )*/
         );
         
@@ -91,7 +92,7 @@
         
         public function __construct($lang) {
             if (!array_key_exists($lang, $this->langList)) {
-                $lang = 'hy';
+                $lang = 'en';
             }
             $this->language = $lang;
             $this->culture = $this->langList[$lang]['culture'];
@@ -115,6 +116,14 @@
         }
         
         public function LanguagePath() {
+            $script = isset($_SERVER['SCRIPT_NAME']) ? str_replace('\\', '/', $_SERVER['SCRIPT_NAME']) : '';
+            $baseDir = defined('BASEDIR') ? str_replace('\\', '/', (string)BASEDIR) : '';
+            $uri = isset($_SERVER['REQUEST_URI']) ? str_replace('\\', '/', $_SERVER['REQUEST_URI']) : '';
+            $haystack = $script.' '.$baseDir.' '.$uri;
+            // Nested apps under /ru/ and /fr/ already include the language prefix in the path.
+            if (preg_match('#/(fr|ru)(/|\s|$)#', $haystack)) {
+                return '';
+            }
             return $this->language.'/';
         }
         
@@ -128,9 +137,11 @@
         }
         
         public function convertLangName($ident) {
-            if (empty($ident)) return 'hy';
+            if (empty($ident)) return 'en';
             if ($ident==='_lg1') return 'ru';
             if ($ident==='_lg2') return 'en';
+            if ($ident==='_lg3') return 'fr';
+            return 'en';
         }
         
         public function CurrencyList() {

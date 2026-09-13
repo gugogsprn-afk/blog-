@@ -16,11 +16,13 @@
                     title="{{ac.name}}"
                 >
                     <div>
+                        {{if ac.filename}}
                         <img
                             src="{{ac.filename}}"
                             alt="{{ac.name}}"
                             title="{{ac.name}}"
                         />
+                        {{end if ac.filename}}
                     </div>
                     <div class="acl">
                         <b>{{ac.ainfo}}</b>

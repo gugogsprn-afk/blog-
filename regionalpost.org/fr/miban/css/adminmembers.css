@@ -1,0 +1,53 @@
+.center {
+    text-align: center;
+}
+.active {
+        
+        padding: 5px 12px;
+   }
+   .inactive {
+       background-image: url('../imgs/light_incative.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 5px 12px;
+   }
+   
+   .disabled {
+       background-image: url('../imgs/disabled.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 5px 12px;
+   }
+  
+   
+   .blue {
+       color: #275F94;
+   }
+   
+   .b-enabled {
+       background-position: center;
+       background-repeat: no-repeat;
+   }
+   .b-enabled.enabled1 {
+       background-image: url('../imgs/user_enabled.png');
+   }
+   .b-enabled.enabled0 {
+       background-image: url('../imgs/user_disabled.png');
+   }
+   
+   
+   table.permlist {
+    width: 1020px;
+}
+table.permlist td {
+    text-align: center !important;
+    width: 100px;
+}
+
+#addCatButton,
+#addCatButton:link,
+#addCatButton:active,
+#addCatButton:visited {
+    text-decoration: none;
+    padding: 2px 11px;
+}

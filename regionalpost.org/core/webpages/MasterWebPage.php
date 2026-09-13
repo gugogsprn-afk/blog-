@@ -269,10 +269,10 @@ class MasterWebPage extends WebPageBase {
         $tpl->vars['rpb2b'] = Page::loadFixed('fixed-rpb2b')->toArray();
         $tpl->vars['st'] = Page::loadFixed('fixed-st')->toArray();
 
-        $mediaKit = HttpContext::current()->request()->absoluteUrl('page_files/media-kit.pdf');
-
-        if($mediaKit) {
-            $tpl->vars['media_kit'] = $mediaKit;
+        $mediaKitRel = 'page_files/media-kit.pdf';
+        $mediaKitFs = rtrim(ROOTDIR, '/').'/'.$mediaKitRel;
+        if (is_file($mediaKitFs)) {
+            $tpl->vars['media_kit'] = HttpContext::current()->request()->absoluteUrl($mediaKitRel);
         }
 
         $year = date('Y');
@@ -324,6 +324,9 @@ class MasterWebPage extends WebPageBase {
 
     protected function ogLocale() {
         $lang = HttpContext::current()->culture()->Language();
+        if ($lang === 'fr') {
+            return 'fr_FR';
+        }
         if ($lang === 'ru') {
             return 'ru_RU';
         }

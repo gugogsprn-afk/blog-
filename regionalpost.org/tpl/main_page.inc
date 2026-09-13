@@ -40,11 +40,13 @@
                         title="{{ac.name}}"
                     >
                         <div class="image">
+                            {{if ac.filename}}
                             <img
                                 src="{{ac.filename}}"
                                 alt="{{ac.name}}"
                                 title="{{ac.name}}"
                             />
+                            {{end if ac.filename}}
                         </div>
                         <div class="acl">
                             <b>{{ac.ainfo}}</b>
@@ -65,10 +67,10 @@
 <div class="publicat page">
     <div class="publicat-header block-header">
         <h2 class="publicat-title">
-            <a href="/publications">Regional Post Magazine</a>
+            <a href="{{curlangp}}publications/">{{if curlang(=fr)}}Magazine Regional Post{{else curlang}}Regional Post Magazine{{end if curlang}}</a>
         </h2>
-        <p class="publicat-recent">Recent Issues</p>
-        <a href="{{curlangp}}publications">{{dict.SHOWALL}}</a>
+        <p class="publicat-recent">{{if curlang(=fr)}}Numéros récents{{else curlang}}Recent Issues{{end if curlang}}</p>
+        <a href="{{curlangp}}publications/">{{dict.SHOWALL}}</a>
     </div>
     <div class="publicat-list slides">
         {{for pubs as pub}}
@@ -79,11 +81,13 @@
             class="publicat-item"
         >
             <div class="image">
+                {{if pub.thumbname}}
                 <img
                     src="{{pub.thumbname}}"
                     alt="{{pub.name}}"
                     title="{{pub.name}}"
                 />
+                {{end if pub.thumbname}}
             </div>
             <div class="acl">
                 <b>{{pub.ainfo}}</b>
