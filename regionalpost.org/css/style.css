@@ -3020,6 +3020,9 @@ footer .soc-list .socbutton:hover {
     gap: 20px;
     align-items: start;
 }
+.b2b__items-item:not(:has(img)) {
+    grid-template-columns: 1fr;
+}
 
 @media (max-width: 1210px) {
     header,

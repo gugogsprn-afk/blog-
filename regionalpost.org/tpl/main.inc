@@ -15,7 +15,7 @@
         {{if canonical}}<link rel="canonical" href="{{canonical}}" />{{end if canonical}}
         {{if ogtags}}{{for ogtags as tag}}<meta property="{{tag.name}}" content="{{tag.value}}"/>{{end for ogtags}}{{end if ogtags}}
         <link href="css/slick.css" rel="stylesheet" type="text/css" />
-        <link href="css/style.css?v=48" rel="stylesheet" type="text/css" /><link href="js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />{{for styles as style}}<link href="{{style}}" rel="stylesheet" type="text/css" />{{end for styles}}
+        <link href="css/style.css?v=49" rel="stylesheet" type="text/css" /><link href="js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />{{for styles as style}}<link href="{{style}}" rel="stylesheet" type="text/css" />{{end for styles}}
         <script  src="js/jquery-1.10.1.min.js" ></script>
         <script  src="js/jquery.utils.min.js?r={{rand}}"></script>
         <script  src="js/fancybox/jquery.fancybox.pack.js" ></script>
