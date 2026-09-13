@@ -66,9 +66,9 @@
         <a
             href="{{media_kit}}"
             target="_blank"
-            title="Media Kit"
+            title="{{if curlang(=fr)}}Dossier de presse{{else curlang}}Media Kit{{end if curlang}}"
         >
-            Media Kit
+            {{if curlang(=fr)}}Dossier de presse{{else curlang}}Media Kit{{end if curlang}}
         </a>
         {{end if media_kit}}
     </article>
